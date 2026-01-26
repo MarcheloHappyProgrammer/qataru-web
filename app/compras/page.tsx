@@ -89,7 +89,7 @@ export default function ComprasInternacionales() {
     },
     {
       nombre: "eBay",
-      logo: "/images/logos/eBay.png",
+      logo: "/images/logos/Ebay.png",
     },
     {
       nombre: "The Children's Place",
@@ -97,11 +97,11 @@ export default function ComprasInternacionales() {
     },
     {
       nombre: "OshKosh",
-      logo: "/images/logos/OshKosh.png",
+      logo: "/images/logos/Oshkosh.png",
     },
     {
       nombre: "Shop Disney",
-      logo: "/images/logos/ShopDisney.png",
+      logo: "/images/logos/Shopdisney.png",
     },
     {
       nombre: "Carter's",
