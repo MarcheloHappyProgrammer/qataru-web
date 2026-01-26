@@ -2,6 +2,12 @@ import Navbar from "@/app/ui/Navbar";
 import "./globals.css";
 import Footer from "./ui/Footer";
 
+export const metadata = {
+  title: "Qataru Web",
+  icons: {
+    icon: "/images/logos/qataru-logo.ico", 
+  },
+};
 export default function RootLayout({
   children,
 }: {

@@ -2,7 +2,6 @@
 import {
   FaWhatsapp,
   FaBoxOpen,
-  FaExchangeAlt,
   FaTruck,
   FaRecycle,
   FaWarehouse,
