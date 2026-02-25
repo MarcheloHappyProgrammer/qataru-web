@@ -14,61 +14,52 @@ import { useState, useEffect, useRef } from "react";
 export default function Home() {
   const servicios = [
     {
-      icon: <FaBoxOpen className="text-5xl text-red-600 mb-4" />,
-      titulo: "CONTRAENTREGA",
+      icon: <FaBoxOpen className="text-5xl text-orange-400 mb-4" />,
+      titulo: "CONTRA ENTREGA",
       descripcion:
-        "Tus clientes pagan al recibir, aumentando la confianza. Aceptamos efectivo, transferencias, Yape, Plin y POS.",
+        "Permite a los clientes pagar sus productos al momento de recibirlos. Aceptamos Efectivo Yape Plin o Pos.",
     },
     {
-      icon: <FaWarehouse className="text-5xl text-red-600 mb-4" />,
+      icon: <TfiReload className="text-5xl text-orange-400 mb-4" />,
+      titulo: "CAMBIO DE PRODUCTO",
+      descripcion:
+        "El cliente devuelve un producto y recibe a cambio un producto diferente.",
+    },
+
+    {
+      icon: <FaWarehouse className="text-5xl text-orange-400 mb-4" />,
       titulo: "SERVICIO FULLFILMENT",
       descripcion:
-        "Nos encargamos del almacenamiento, empaquetado, rotulado, envío y cobro de tus productos, permitiéndote enfocarte en otras áreas de tu negocio.",
+        "Recepción, almacenamiento, gestión de inventario, empaquetado y envío de productos a los clientes finales.",
     },
     {
-      icon: <FaTruck className="text-5xl text-red-600 mb-4" />,
+      icon: <FaTruck className="text-5xl text-orange-400 mb-4" />,
       titulo: "RECOJO A DOMICILIO",
       descripcion:
         "Pasamos por tus paquetes y nos encargamos del resto, garantizando eficiencia en la gestión y la entrega.",
-    },
-    {
-      icon: <TfiReload className="text-5xl text-red-600 mb-4" />,
-      titulo: "CAMBIO DE PRODUCTO",
-      descripcion:
-        "Facilitamos el proceso de cambio de productos para tus clientes, recogiendo el artículo no deseado y entregando el nuevo de manera rápida y segura.",
-    },
-    {
-      icon: <FaRecycle className="text-5xl text-red-600 mb-4" />,
-      titulo: "REUTILIZADO",
-      descripcion:
-        "Si no concretaste una venta, puedes reutilizar el pedido para otro cliente, optimizando recursos y tiempo.",
     },
   ];
 
   const razones = [
     {
-      titulo: "Rapidez y Eficiencia",
-      descripcion: "Entregas el mismo día en Lima Metropolitana",
+      titulo: "Atención personalizada",
+      descripcion: "Nos comunicamos por vía whatsapp cualquier inconveniente",
     },
     {
-      titulo: "Servicio Personalizado",
-      descripcion: "Atención dedicada a las necesidades de tu negocio",
+      titulo: "Sistema de Seguimiento",
+      descripcion: "Monitoreo de su pedido en Tiempo Real",
     },
     {
-      titulo: "Tecnología de Punta",
-      descripcion: "Sistema de rastreo en tiempo real",
+      titulo: "Cobertura",
+      descripcion: "Llegamos a todo Lima metropolitana y Callao el mismo día",
     },
     {
-      titulo: "Cobertura Total",
-      descripcion: "Llegamos a todos los distritos de Lima y Callao",
+      titulo: "Seguridad y Garantía",
+      descripcion: "Ante cualquier perdida o robo que sufra tu producto",
     },
     {
-      titulo: "Seguridad Garantizada",
-      descripcion: "Tus paquetes están protegidos en todo momento",
-    },
-    {
-      titulo: "Precios Competitivos",
-      descripcion: "Tarifas justas y transparentes sin costos ocultos",
+      titulo: "Tarifa Exclusiva",
+      descripcion: "Si tienes envíos masivos, tenemos tarifa especial para ti",
     },
   ];
 
@@ -136,27 +127,32 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
 
         {/* Decorative boxes */}
-        <div className="absolute top-10 left-20 w-32 h-32 bg-red-600 opacity-20 rounded-lg transform rotate-12"></div>
+        <div className="absolute top-10 left-20 w-32 h-32 bg-orange-500 opacity-30 rounded-lg transform rotate-12"></div>
         <div className="absolute bottom-20 right-32 w-40 h-40 bg-yellow-500 opacity-20 rounded-lg transform -rotate-12"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-green-500 opacity-20 rounded-lg transform rotate-45"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center md:ml-30">
-          <div className="text-white max-w-2xl">
+        <div className="relative z-10 max-w-6xl mx-auto pl-20 h-full flex items-center">
+          <div className="text-white flex-1">
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              LA SATISFACCIÓN DE
+              TU VENDES...
               <br />
-              <span className="text-white">TU CLIENTE ES</span>
+              <span className="text-white">NOSOTROS LO</span>
               <br />
-              <span className="text-white">NUESTRA PRIORIDAD</span>
+              <span className="text-white">ENTREGAMOS</span>
             </h1>
             <div className="flex gap-4 mt-8">
-              <a className=" cursor-pointer bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded transition">
-                CONOCE NUESTRO SERVICIO
-              </a>
-              <a className="bg-transparent cursor-pointer border-2 border-white hover:bg-white hover:text-gray-900 text-white font-semibold px-8 py-3 rounded transition flex items-center gap-2">
-                <FaWhatsapp /> ESCRÍBENOS
+              <a className="bg-green-700 cursor-pointer hover:bg-green-800 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
+                <FaWhatsapp/> ESCRÍBENOS
               </a>
             </div>
+          </div>
+
+          <div className="flex-2 flex justify-end pl-10">
+            <img
+              src="images/banner/imagen-banner-principal.jpeg"
+              alt="Banner"
+              className="max-h-130 object-contain rounded-xl"
+            />
           </div>
         </div>
 
@@ -172,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Servicios */}
-      <section ref={serviciosRef} className="py-16 bg-white">
+      <section ref={serviciosRef} className="pt-16 pb-5 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div
             className={`text-center mb-12 transition-all duration-700 ${
@@ -182,17 +178,16 @@ export default function Home() {
             }`}
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="bg-red-600 w-12 h-12 rounded-full flex items-center justify-center">
+              <div className="bg-orange-500 w-12 h-12 rounded-full flex items-center justify-center">
                 <FaBoxOpen className="text-white text-xl" />
               </div>
-              <h2 className="text-4xl font-bold text-gray-800">Servicios</h2>
+              <h2 className="text-4xl font-bold text-gray-800">Servicio</h2>
             </div>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Ofrecemos soluciones rápidas y seguras para la distribución de tus
-              paquetes, garantizando eficiencia en cada entrega. Nuestro
-              compromiso es brindarte un servicio confiable, adaptado a las
-              necesidades de tu negocio, asegurando que tus envíos lleguen a
-              tiempo y en perfectas condiciones.
+              Empresa especializada en entregas de paquetes seguras y rápidas,
+              garantizando eficiencia y compromiso, adaptándonos a sus
+              necesidades que tiene su negocio para cumplir sus objetivos en
+              cada entrega.
             </p>
           </div>
 
@@ -201,7 +196,7 @@ export default function Home() {
               <div
                 key={index}
                 className={`text-center p-4 py-10 rounded-lg hover:shadow-xl transition-all duration-500 border border-gray-100
-                 w-full md:w-[calc(50%-1rem)] lg:w-[calc(26%-1rem)] max-w-sm ${
+                 w-full md:w-[calc(50%-1rem)] lg:w-[calc(22%-1rem)] max-w-sm ${
                    serviciosInView
                      ? "opacity-100 translate-y-0"
                      : "opacity-0 translate-y-10"
@@ -221,27 +216,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Por qué elegirnos*/}
+      {/* Beneficios */}
       <section ref={razonesRef} className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-40">
           <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 items-center">
-            {/* Bloque azul (más angosto) */}
-            <div
-              className={`hidden lg:block lg:col-span-2 h-72 bg-[#001d56] rounded-lg transition-all duration-700 ${
-                razonesInView
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-10"
-              }`}
-            ></div>
-
             {/* Imagen repartidor */}
             <div
-              className={`flex justify-center lg:col-span-3 transition-all duration-700 delay-200 ${
+              className={`flex justify-center lg:col-span-4  transition-all duration-700 delay-200 ${
                 razonesInView ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <img
-                src="/images/repartidor.png"
+                src="/images/repartidor.jpeg"
                 alt="Mensajero"
                 className="max-h-100 object-contain"
               />
@@ -249,15 +235,15 @@ export default function Home() {
 
             {/* Texto + razones (más ancho) */}
             <div
-              className={`lg:col-span-3 transition-all duration-700 delay-300 ${
+              className={`lg:col-span-4 transition-all duration-700 delay-300 px-10 ${
                 razonesInView
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
               }`}
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                ¿Por qué elegirnos como <br />
-                <span className="text-red-600">servicio de mensajería?</span>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6">
+                
+                - Beneficios
               </h2>
 
               <ul className="space-y-4">
@@ -271,7 +257,7 @@ export default function Home() {
                     }`}
                     style={{ transitionDelay: `${400 + index * 100}ms` }}
                   >
-                    <FaCheckCircle className="text-[#001d56] text-xl mt-1 shrink-0" />
+                    <FaCheckCircle className="text-orange-600 text-xl mt-1 shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800">
                         {razon.titulo}

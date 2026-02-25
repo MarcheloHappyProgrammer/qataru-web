@@ -151,7 +151,7 @@ export default function Contacto() {
 
                 <button
                   onClick={handleSubmit}
-                  className="bg-linear-to-r from-red-400 cursor-pointer to-red-400 hover:from-red-700 hover:to-red-500 text-white font-semibold px-8 py-3 rounded-lg transition shadow-md hover:shadow-lg"
+                  className="bg-linear-to-r from-orange-700 cursor-pointer to-orange-600 hover:from-orange-800 hover:to-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition shadow-md hover:shadow-lg"
                 >
                   Enviar
                 </button>

@@ -16,35 +16,32 @@ export default function Navbar() {
         <div className="pl-6 md:pl-10 shrink-0 z-50">
           <Link
             href="/"
-            className="text-red-600 font-bold text-xl md:text-2xl flex items-center gap-2"
+            className="text-orange-500 font-bold text-xl md:text-2xl flex items-center gap-2"
           >
-            <div className="bg-red-600 w-8 h-8 rounded-full flex items-center justify-center">
-              <div className="bg-white w-4 h-2 rounded-full"></div>
-            </div>
-            <span>DINSIDES</span>
+            <img src="/images/logos/Qataru.png" alt="" className="max-w-50"/>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div
-          className="hidden lg:flex grow h-full relative items-center justify-center bg-red-600 text-white px-12"
+          className="hidden lg:flex grow h-full relative items-center justify-center bg-orange-500 text-white px-10"
           style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }}
         >
-          <div className="flex items-center gap-8 text-sm font-semibold">
-            <Link href="/" className="hover:underline transition">
-              Courier Lima
+          <div className="flex gap-8 text-md font-semibold">
+            <Link href="/" className="hover:scale-105 transition">
+              COURIER LIMA
             </Link>
-            <Link href="/compras" className="hover:underline transition">
-              Compras internacionales
+            <Link href="/compras" className="hover:scale-105 transition">
+              COMPRAS INTERNACIONALES
             </Link>
-            <Link href="/contacto" className="hover:underline transition">
-              Contacto
+            <Link href="/contacto" className="hover:scale-105 transition">
+              CONTACTO
             </Link>
           </div>
         </div>
 
         {/* Desktop Zona Clientes */}
-        <div className="hidden lg:flex h-full items-center bg-white border-l px-10">
+        <div className="hidden lg:flex h-full items-center bg-white px-10">
           <a
             href="https://www.qataruexpress.com/auth/sign-in"
             target="_blank"
@@ -56,7 +53,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Barra Roja */}
-        <div className="hidden lg:block h-full w-20 bg-red-600"></div>
+        <div className="hidden lg:block h-full w-20 bg-orange-500"></div>
 
         {/* Mobile Menu Button */}
         <button
@@ -92,21 +89,21 @@ export default function Navbar() {
           <div className="flex flex-col p-6 space-y-4">
             <Link
               href="/"
-              className="text-gray-700 font-medium hover:text-red-600 transition py-2"
+              className="text-gray-700 font-medium hover:text-orange-400 transition py-2"
               onClick={toggleMenu}
             >
               Courier Lima
             </Link>
             <Link
               href="/compras"
-              className="text-gray-700 font-medium hover:text-red-600 transition py-2"
+              className="text-gray-700 font-medium hover:text-orange-400 transition py-2"
               onClick={toggleMenu}
             >
               Compras internacionales
             </Link>
             <Link
               href="/contacto"
-              className="text-gray-700 font-medium hover:text-red-600 transition py-2"
+              className="text-gray-700 font-medium hover:text-orange-400 transition py-2"
               onClick={toggleMenu}
             >
               Contacto
@@ -119,7 +116,7 @@ export default function Navbar() {
             <a
               href="https://www.qataruexpress.com/auth/sign-in"
               target="_blank"
-              className="flex items-center gap-2 text-gray-700 font-medium hover:text-red-600 transition py-2"
+              className="flex items-center gap-2 text-gray-700 font-medium hover:text-orange-400 transition py-2"
             >
               <FaUser className="text-gray-400" />
               Zona Clientes

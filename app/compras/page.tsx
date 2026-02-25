@@ -2,76 +2,55 @@
 import {
   FaWarehouse,
   FaShoppingCart,
-  FaFacebookMessenger,
   FaStar,
   FaWhatsapp,
+  FaPlane,
 } from "react-icons/fa";
 import {
   MdComputer,
-  MdShoppingBag,
-  MdLocalShipping,
-  MdCardGiftcard,
+  MdShoppingBag
 } from "react-icons/md";
-import { MdEmail } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 
 export default function ComprasInternacionales() {
   const beneficios = [
     {
       numero: "01",
-      titulo: "Buena Tarifa",
+      titulo: "Tarifa económica",
       descripcion:
-        "Tarifas económicas. $10.5 x KG + $10 por la guía operativa.",
+        "10$ x KG + 8$ Por desaduanaje",
     },
     {
       numero: "02",
       titulo: "Asesoría Personalizada",
-      descripcion: "Soporte y recomendaciones a la hora de realizar tu compra.",
+      descripcion: "Te brindamos soporte en tu compra y cualquier duda que tengas",
     },
     {
       numero: "03",
-      titulo: "Unión de Paquetes",
+      titulo: "Consolidación de Paquetería",
       descripcion:
-        "Une todas tus compras de distintas páginas en un solo paquete.",
-    },
-    {
-      numero: "04",
-      titulo: "Cotización Gratuita",
-      descripcion: "Cotizamos todos los productos que desees.",
-    },
+        "Compra en diferentes páginas y tráelo todo junto",
+    }
   ];
 
   const pasos = [
     {
-      numero: "#1",
-      icono: <MdComputer className="text-6xl" />,
-      titulo: "Regístrate con Envío Franco",
-      descripcion: "y empieza a comprar.",
-      link: "aquí",
-    },
-    {
-      numero: "#2",
+      numero: "1° Compra en tu tienda preferida de EEUU",
       icono: <FaShoppingCart className="text-6xl" />,
-      titulo: "Regístrate en tus tiendas online",
-      descripcion: "preferidas con la dirección de Envío Franco.",
+      titulo: "Al momento de comprar, usa nuestra dirección de Miami.",
+      
     },
     {
-      numero: "#3",
-      icono: <MdShoppingBag className="text-6xl" />,
-      titulo: "¡¡¡Compra eso que tanto",
-      descripcion: "quieres!!!",
+      numero: "2° Envíanos el detalle de tu compra",
+      icono: <FaWarehouse className="text-6xl" />,
+      titulo: "Envíanos un correo con los datos de tu compra en PDF."
     },
     {
-      numero: "#4",
-      icono: <MdLocalShipping className="text-6xl" />,
-      titulo: "Coordina con Envío Franco el",
-      descripcion: "embarque de tu pedido.",
+      numero: "3° ¡El resto nos encargamos nosotros!",
+      icono: <FaPlane className="text-6xl" />,
+      titulo: "Una vez llegado al Perú, te informaremos para la recepción del producto. "
     },
-    {
-      numero: "#5",
-      icono: <MdCardGiftcard className="text-6xl" />,
-      titulo: "¡Recibe y disfruta tu compra!",
-    },
+    
   ];
 
   const tiendas = [
@@ -80,12 +59,12 @@ export default function ComprasInternacionales() {
       logo: "/images/logos/Amazon.png",
     },
     {
-      nombre: "Zumiez",
-      logo: "/images/logos/Zumiez.png",
+      nombre: "Jomashop",
+      logo: "/images/logos/Jomashop.png",
     },
     {
-      nombre: "GAP Factory",
-      logo: "/images/logos/GapFactory.jpg",
+      nombre: "Adidas",
+      logo: "/images/logos/Adidas.png",
     },
     {
       nombre: "eBay",
@@ -96,28 +75,28 @@ export default function ComprasInternacionales() {
       logo: "/images/logos/TheChildren.png",
     },
     {
-      nombre: "OshKosh",
-      logo: "/images/logos/Oshkosh.png",
+      nombre: "Nike",
+      logo: "/images/logos/Nike.png",
     },
     {
       nombre: "Shop Disney",
       logo: "/images/logos/Shopdisney.png",
     },
     {
-      nombre: "Carter's",
-      logo: "/images/logos/Carters.svg",
+      nombre: "Walmart",
+      logo: "/images/logos/Walmart.png",
     },
     {
-      nombre: "Banana Republic",
-      logo: "/images/logos/BananaRepublic.png",
+      nombre: "Michael Kors",
+      logo: "/images/logos/MichaelKors.png",
     },
     {
       nombre: "Tommy Hilfiger",
       logo: "/images/logos/TommyHilfiger.png",
     },
     {
-      nombre: "Polo Ralph Lauren",
-      logo: "/images/logos/RalphLauren.png",
+      nombre: "Sony",
+      logo: "/images/logos/Sony.png",
     },
     {
       nombre: "6pm",
@@ -127,26 +106,26 @@ export default function ComprasInternacionales() {
 
   const testimonios = [
     {
-      nombre: "María González",
-      empresa: "Boutique Fashion",
+      nombre: "Cynthia Rodriguez",
+      empresa: "Joyería JK",
       testimonio:
-        "Excelente servicio, mis clientes reciben sus pedidos el mismo día. La opción de contraentrega ha aumentado mis ventas un 40%.",
+        "Excelente servicio, mis clientes están satisfechos con las entregas que reciben día a día gracias al servicio de pago contra entrega.",
       rating: 5,
       foto: "/images/clientes/maria.jpg",
     },
     {
-      nombre: "Carlos Mendoza",
-      empresa: "Tech Store Peru",
+      nombre: "Jorge Cárdenas",
+      empresa: "Importaciones Iphone",
       testimonio:
-        "El servicio de fullfilment me ha permitido enfocarme en las ventas mientras ellos se encargan de toda la logística. Muy recomendable.",
+        "Mis importaciones me salen más rentables y lo mejor es que ellos me ayudan en todo mis tramites, buen servicio.",
       rating: 5,
       foto: "/images/clientes/carlos.png",
     },
     {
-      nombre: "Andrea Flores",
-      empresa: "Cosméticos Lima",
+      nombre: "Angelica Raymundi",
+      empresa: "Mikita",
       testimonio:
-        "La atención es personalizada y siempre están disponibles. El cambio de prenda es perfecto para mi negocio de ropa.",
+        "Mi pedido de EEUU me llego rápido, estoy muy agradecida con los chicos de Qataru Express, porque son muy amables y pacientes.",
       rating: 5,
       foto: "/images/clientes/andrea.jpg",
     },
@@ -195,42 +174,38 @@ export default function ComprasInternacionales() {
         <div className="absolute bottom-20 right-32 w-40 h-40 bg-yellow-500 opacity-20 rounded-lg transform -rotate-12"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-green-500 opacity-20 rounded-lg transform rotate-45"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
-          <div className="flex items-center justify-between w-full mx-30 ">
-            <div className="text-white max-w-xl pr-4">
-              <h1 className="text-5xl font-bold mb-4 leading-tight">
-                NUEVA DIRECCIÓN
-              </h1>
-              <p className="text-xl mb-6 uppercase tracking-wide">
-                En nuestro warehouse de Miami
-              </p>
+        <div className="relative z-10 max-w-6xl mx-auto pl-20 h-full flex items-center">
+          
+            <div className="text-white flex-1.5">
+              <h1 className="text-5xl font-bold mb-6 leading-tight">
+              TRAEMOS TUS
+              <br />
+              <span className="text-white">COMPRAS DESDE</span>
+              <br />
+              <span className="text-white">USA A PERU</span>
+            </h1>
+              
               <div className="flex flex-col gap-3">
-                <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 hover:scale-105 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 w-fit shadow-lg hover:shadow-xl">
-                  Ver más
+                
+                <button className="bg-orange-600 cursor-pointer hover:bg-orange-700 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
+                  MAYOR INFORMACION
                 </button>
-                <button className="bg-red-600 cursor-pointer hover:bg-red-700 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
-                  <FaWarehouse /> Regístrate Ahora
-                </button>
-                <button className="bg-blue-100 cursor-pointer hover:bg-blue-200 hover:scale-105 text-blue-900 font-semibold px-8 py-3 rounded transition-all duration-300 w-fit shadow-md hover:shadow-lg">
-                  → Cotiza Tu Pedido
-                </button>
+                
               </div>
             </div>
-
-            {/* Warehouse Image */}
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="w-120 rounded-lg shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
-                  <img src="/images/banner/casa.webp" alt="" />
-                </div>
-              </div>
-            </div>
+            <div className="flex-2 flex justify-end p-30">
+            <img
+              src="images/banner/imagen-banner-compras-internacionales.jpeg"
+              alt="Banner"
+              className="max-h-130 object-contain rounded-xl"
+            />
           </div>
+          
         </div>
       </section>
 
       {/* Traemos tus productos Section */}
-      <section ref={productosRef} className="py-16 bg-gray-50">
+      <section ref={productosRef} className="pt-16 pb-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div
             className={`text-center mb-8 transition-all duration-700 ${
@@ -240,7 +215,7 @@ export default function ComprasInternacionales() {
             }`}
           >
             <p className="text-sm text-gray-500 uppercase tracking-wide mb-2">
-              CHASQUI EXPRESS
+              QATARU EXPRESS
             </p>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Traemos tus productos
@@ -257,15 +232,7 @@ export default function ComprasInternacionales() {
             }`}
           >
             <p>
-              Somos una empresa peruana que brinda el servicio de importación de
-              Estados Unidos a Perú para diversos productos. Si necesitas un
-              producto que es vendido en EEUU, podemos traerlo a Lima y enviarlo
-              a provincia.
-            </p>
-            <p>
-              Los productos importados son variados como tecnología, ropa,
-              zapatillas, accesorios, artículos para la oficina, maquillaje y
-              entre otros productos de tiendas en los Estados Unidos.
+              Compra en EEUU e impórtalo a Perú de manera fácil y sencilla con nosotros. Puedes traer celulares IPhone, zapatillas, ropa, calzado, carteras, artículos de oficina, maquillaje, perfumes y entre productos de las tiendas de Estados Unidos.
             </p>
           </div>
         </div>
@@ -276,7 +243,7 @@ export default function ComprasInternacionales() {
         ref={beneficiosRef}
         className="px-4 py-10 sm:px-6 md:px-10 lg:px-16 bg-white"
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto  pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Beneficios Column */}
             <div
@@ -286,11 +253,9 @@ export default function ComprasInternacionales() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <p className="text-sm text-cyan-500 uppercase tracking-wide mb-3">
-                Beneficios y servicios
-              </p>
+              
               <h2 className="text-4xl font-bold text-cyan-900 mb-8">
-                Chasqui Express
+                Nuestro Servicio
               </h2>
 
               <div className="space-y-6">
@@ -305,12 +270,12 @@ export default function ComprasInternacionales() {
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     <div className="shrink-0">
-                      <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold">
+                      <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">
                         {beneficio.numero}
                       </div>
                     </div>
                     <div className="border-l-2 border-gray-200 pl-6 pb-6">
-                      <h3 className="text-xl font-bold text-cyan-800 mb-2">
+                      <h3 className="text-xl font-bold text-gray-700 mb-2">
                         {beneficio.titulo}
                       </h3>
                       <p className="text-gray-600 text-sm">
@@ -324,16 +289,16 @@ export default function ComprasInternacionales() {
 
             {/* Te atendemos personalmente Column */}
             <div
-              className={`bg-linear-to-br from-blue-50 to-cyan-50 p-8 rounded-lg transition-all duration-700 delay-300 ${
+              className={`bg-linear-to-br from-gray-50 to-gray-50 p-8 rounded-lg transition-all duration-700 delay-300 ${
                 beneficiosInView
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
               }`}
             >
-              <h3 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-                Te atendemos
+              <h3 className="text-3xl font-bold text-cyan-900 mb-6 text-center">
+                Asesoría
                 <br />
-                personalmente
+                Personalizada
               </h3>
 
               <div className="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -346,24 +311,10 @@ export default function ComprasInternacionales() {
                   <div className="flex items-start gap-3">
                     <FaWhatsapp className="text-green-500 text-6xl shrink-0" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2">
-                        WhatsApp Chasqui
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        Como comprar de USA de Manera Rápida, Barata y Segura?
-                        Te apoyamos, asesoramos paso a paso lo que debes hacer y
-                        como hacerlo usar🤩✈️ Compra de USA y Recíbelo en Perú
+                      
+                      <p className="text-l text-gray-600 font-bold">
+                        Compra en EEUU y tráelo Perú de manera sencilla y rápida con una tarifa especial 📦✈️
                       </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3 pt-4 justify-center">
-                    <div className="w-12 h-12 bg-blue-500 hover:bg-blue-600 hover:scale-110 rounded-lg flex items-center justify-center cursor-pointer shadow transition-all duration-300">
-                      <FaFacebookMessenger className="text-white text-xl" />
-                    </div>
-
-                    <div className="w-12 h-12 bg-gray-500 hover:bg-gray-600 hover:scale-110 rounded-lg flex items-center justify-center cursor-pointer shadow transition-all duration-300">
-                      <MdEmail className="text-white text-xl" />
                     </div>
                   </div>
                 </div>
@@ -377,7 +328,7 @@ export default function ComprasInternacionales() {
       <section ref={pasosRef} className="pb-16 pt-5 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2
-            className={`text-4xl font-bold text-center text-cyan-700  mb-18 transition-all duration-700 ${
+            className={`text-4xl font-bold text-center text-gray-900  mb-5 transition-all duration-700 ${
               pasosInView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -385,31 +336,26 @@ export default function ComprasInternacionales() {
           >
             ¿Cómo funciona?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {pasos.map((paso, index) => (
               <div
                 key={index}
-                className={`text-center transition-all duration-700 ${
+                className={`text-center transition-all duration-700 p-15 ${
                   pasosInView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="bg-gray-900 rounded-full w-40 h-40 mx-auto mb-4 flex items-center justify-center text-blue-400 hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-900 rounded-full w-40 h-40 mx-auto mb-4 flex items-center justify-center text-amber-500 hover:scale-110 transition-transform duration-300">
                   {paso.icono}
                 </div>
-                <h3 className="text-2xl font-bold text-blue-600 mb-2">
+                <h3 className="text-2xl font-bold text-cyan-900 mb-2">
                   {paso.numero}
                 </h3>
                 <p className="text-sm text-gray-700">
                   {paso.titulo}{" "}
-                  {paso.link && (
-                    <span className="text-blue-600 underline cursor-pointer hover:text-blue-800 transition-colors">
-                      {paso.link}
-                    </span>
-                  )}{" "}
-                  {paso.descripcion}
+                  
                 </p>
               </div>
             ))}
@@ -422,18 +368,16 @@ export default function ComprasInternacionales() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <button className="bg-gray-800 cursor-pointer hover:bg-gray-900 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 shadow-lg hover:shadow-xl">
-              COTIZA AQUÍ
-            </button>
+            
           </div>
         </div>
       </section>
 
       {/* ¿Dónde comprar en USA? Section */}
-      <section ref={tiendasRef} className="py-16 bg-gray-50">
+      <section ref={tiendasRef} className=" bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2
-            className={`text-4xl font-bold text-center text-cyan-800 mb-12 transition-all duration-700 ${
+            className={`text-4xl font-bold text-center text-gray-900 mb-12 transition-all duration-700 ${
               tiendasInView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -464,7 +408,7 @@ export default function ComprasInternacionales() {
       </section>
 
       {/* Testimonios Section */}
-      <section ref={testimoniosRef} className="py-16 bg-white">
+      <section ref={testimoniosRef} className="py-25 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div
             className={`text-center mb-12 transition-all duration-700 ${
@@ -474,11 +418,10 @@ export default function ComprasInternacionales() {
             }`}
           >
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Lo que dicen nuestros clientes
+              Testimonios de nuestros clientes
             </h2>
             <p className="text-gray-600">
-              La satisfacción de nuestros clientes es nuestra mejor carta de
-              presentación
+              Ellos también confiaron en nuestros servicios, solo faltas tú
             </p>
           </div>
 

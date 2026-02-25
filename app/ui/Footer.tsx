@@ -3,30 +3,29 @@ import { FaFacebookF, FaInstagram, FaChevronRight } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#001540] text-white pt-12 pb-6">
+    <footer className="bg-[#0f1b34] text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Columna 1: Logo y Descripción */}
         <div className="space-y-6">
           <div className="flex items-center gap-2">
             <span className="font-bold text-xl italic text-orange-500">
-              CHASQUI <span className="text-white">EXPRESS</span>
+              QATARU <span className="text-white">EXPRESS</span>
             </span>
           </div>
           <p className="text-sm text-gray-300 leading-relaxed">
-            Somos una empresa peruana que brinda el servicio de importación de
-            Estados Unidos a Perú para diversos productos. Si necesitas un
-            producto vendido en EEUU, podemos traerlo a Lima y enviarlo a
-            provincia.
+            Somos una empresa de Courier para emprendedores e importamos tus compras internacionales de EEUU y lo llevamos hasta la puerta de tu domicilio sin hacer muchos tramites. 
           </p>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="https://www.facebook.com/QataruExpress/"
+              target="_blank"
               className="bg-blue-900/50 p-3 rounded-full hover:bg-blue-800 transition"
             >
               <FaFacebookF size={14} />
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/qataruexpress/"
+              target="_blank"
               className="bg-blue-900/50 p-3 rounded-full hover:bg-blue-800 transition"
             >
               <FaInstagram size={14} />
@@ -39,8 +38,6 @@ export default function Footer() {
           <h3 className="text-lg font-bold mb-6">Términos y Políticas</h3>
           <ul className="space-y-4 text-sm text-gray-300">
             {[
-              "Cómo comprar en USA",
-              "FAQ y Recomendaciones",
               "Política de Privacidad",
               "Sobre Nosotros",
               "Términos y Condiciones",
@@ -60,18 +57,13 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold mb-6">Horarios de atención</h3>
           <div className="text-sm text-gray-300 space-y-4">
-            <p>Lunes - Viernes: 10:00am a 6:00pm</p>
-            <p>Sábados: 10:00am a 3:00pm</p>
-            <p className="mt-6 italic">
-              Chasqui Express, te brinda una solución confiable y eficaz para
-              traer tus productos de Estados Unidos a Perú.
-            </p>
-            <Link
-              href="#"
-              className="flex items-center gap-2 text-blue-400 hover:underline mt-4"
-            >
-              <FaChevronRight className="text-[10px]" /> Chasqui Express Perú
-            </Link>
+            <p>Lunes - Viernes: 8:00am a 5:00pm</p>
+            <p>Sábados: 8:00am a 1:00pm</p>
+            <p className="mt-6 mb-2">
+              Contáctenos: 
+            </p>📩 
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=qataruexpress@gmail.com" target="_blank"
+  rel="noopener noreferrer" className="underline">qataruexpress@gmail.com</a>
           </div>
         </div>
       </div>
@@ -79,8 +71,8 @@ export default function Footer() {
       {/* Copyright Inferior */}
       <div className="mt-12 pt-6 border-t border-blue-900 text-center text-xs text-gray-400">
         <p>
-          Copyright © 2026, Chasqui Express. Sitio web desarrollado por tu
-          Marchelo Cortabrazo
+          Copyright © 2026, Qataru Express. Sitio web desarrollado por
+          Marchelo Cortabrazo Rios
         </p>
       </div>
     </footer>
