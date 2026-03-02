@@ -18,11 +18,11 @@ export default function Navbar() {
             href="/"
             className="text-orange-500 font-bold text-xl md:text-2xl flex items-center gap-2"
           >
-            <img src="/images/logos/Qataru.png" alt="" className="max-w-50"/>
+            <img src="/images/logos/Qataru.png" alt="" className="max-w-50" />
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - sin cambios */}
         <div
           className="hidden lg:flex grow h-full relative items-center justify-center bg-orange-500 text-white px-10"
           style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }}
@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop Zona Clientes */}
+        {/* Desktop Zona Clientes - sin cambios */}
         <div className="hidden lg:flex h-full items-center bg-white px-10">
           <a
             href="https://www.qataruexpress.com/auth/sign-in"
@@ -52,17 +52,25 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Desktop Barra Roja */}
+        {/* Desktop Barra Roja - sin cambios */}
         <div className="hidden lg:block h-full w-20 bg-orange-500"></div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden pr-6 text-2xl text-gray-700 z-50 cursor-pointer"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Mobile: franja naranja + botón hamburguesa */}
+        <div className="lg:hidden flex h-full items-center">
+          {/* Franja naranja en móvil con clip-path igual al desktop */}
+          <div
+            className="h-full bg-orange-500 flex items-center pr-6 pl-10"
+            style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }}
+          >
+            <button
+              onClick={toggleMenu}
+              className="text-2xl text-white z-50 cursor-pointer"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Mobile Menu */}

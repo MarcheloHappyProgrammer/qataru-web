@@ -7,6 +7,7 @@ import {
   FaWarehouse,
   FaCheckCircle,
   FaStar,
+  FaGift,
 } from "react-icons/fa";
 import { TfiReload } from "react-icons/tfi";
 import { useState, useEffect, useRef } from "react";
@@ -25,7 +26,6 @@ export default function Home() {
       descripcion:
         "El cliente devuelve un producto y recibe a cambio un producto diferente.",
     },
-
     {
       icon: <FaWarehouse className="text-5xl text-orange-400 mb-4" />,
       titulo: "SERVICIO FULLFILMENT",
@@ -78,7 +78,7 @@ export default function Home() {
       testimonio:
         "El servicio de fullfilment me ha permitido enfocarme en las ventas mientras ellos se encargan de toda la logística. Muy recomendable.",
       rating: 5,
-      foto: "/images/clientes/carlos.png",
+      foto: "/images/clientes/carlos.jpg",
     },
     {
       nombre: "Andrea Flores",
@@ -90,27 +90,37 @@ export default function Home() {
     },
   ];
 
-  // Hook para detectar cuando un elemento es visible
   const useInView = (options = {}) => {
     const [isInView, setIsInView] = useState(false);
     const ref = useRef(null);
+    const hasTriggered = useRef(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !hasTriggered.current) {
+            hasTriggered.current = true;
             setIsInView(true);
-            observer.disconnect(); // Solo animar una vez
+            observer.disconnect();
           }
         },
-        { threshold: 0.1, ...options },
+        {
+          threshold: 0.1,
+          rootMargin: "-80px 0px -80px 0px",
+          ...options,
+        },
       );
 
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
+      const timer = setTimeout(() => {
+        if (ref.current) {
+          observer.observe(ref.current);
+        }
+      }, 100);
 
-      return () => observer.disconnect();
+      return () => {
+        clearTimeout(timer);
+        observer.disconnect();
+      };
     }, []);
 
     return { ref, isInView };
@@ -123,7 +133,12 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero/Banner Section */}
-      <section className="relative h-125 bg-linear-to-r from-gray-800 to-gray-900 overflow-hidden">
+      {/* 
+        MÓVIL: altura automática, padding top/bottom, columna única centrada
+        TABLET: altura media, layout flexible
+        DESKTOP: sin cambios (h-125, pl-20, flex row)
+      */}
+      <section className="relative h-auto py-16 px-6 md:py-20 md:px-10 lg:h-125 lg:py-0 lg:px-0 bg-linear-to-r from-gray-800 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
 
         {/* Decorative boxes */}
@@ -131,40 +146,44 @@ export default function Home() {
         <div className="absolute bottom-20 right-32 w-40 h-40 bg-yellow-500 opacity-20 rounded-lg transform -rotate-12"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-green-500 opacity-20 rounded-lg transform rotate-45"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto pl-20 h-full flex items-center">
+        {/* 
+          MÓVIL: flex-col, centrado, texto centrado
+          DESKTOP: flex-row, pl-20 (igual que antes)
+        */}
+        <div className="relative z-10 max-w-6xl mx-auto h-full flex flex-col items-center text-center lg:flex-row lg:pl-20 lg:text-left lg:items-center gap-8 lg:gap-0">
           <div className="text-white flex-1">
-            <h1 className="text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
               TU VENDES...
               <br />
               <span className="text-white">NOSOTROS LO</span>
               <br />
               <span className="text-white">ENTREGAMOS</span>
             </h1>
-            <div className="flex gap-4 mt-8">
-              <a className="bg-green-700 cursor-pointer hover:bg-green-800 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
-                <FaWhatsapp/> ESCRÍBENOS
+            <div className="flex gap-4 mt-8 justify-center lg:justify-start">
+              <a
+                href="https://wa.link/yc7jq2"
+                target="_blank"
+                className="bg-green-700 cursor-pointer hover:bg-green-800 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl"
+              >
+                <FaWhatsapp /> ESCRÍBENOS
               </a>
             </div>
           </div>
 
-          <div className="flex-2 flex justify-end pl-10">
+          {/* 
+            MÓVIL: imagen más pequeña, centrada debajo del texto
+            DESKTOP: flex-2, justify-end, pl-10 (sin cambios)
+          */}
+          <div className="w-full flex justify-center lg:flex-2 lg:justify-end lg:pl-10">
             <img
               src="images/banner/imagen-banner-principal.jpeg"
               alt="Banner"
-              className="max-h-130 object-contain rounded-xl"
+              className="max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-130 object-contain rounded-xl"
             />
           </div>
         </div>
 
-        {/* Large text background */}
-        <div className="absolute inset-0 flex items-center justify-between px-20 pointer-events-none">
-          <div className="text-gray-700 text-9xl font-black opacity-10">
-            ESLOGAN
-          </div>
-          <div className="text-gray-700 text-9xl font-black opacity-10">
-            EMPRESA
-          </div>
-        </div>
+        
       </section>
 
       {/* Servicios */}
@@ -191,12 +210,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          {/* 
+            MÓVIL: 1 columna
+            TABLET: 2 columnas
+            DESKTOP: sin cambios (wrap + calc widths)
+          */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-6">
             {servicios.map((servicio, index) => (
               <div
                 key={index}
                 className={`text-center p-4 py-10 rounded-lg hover:shadow-xl transition-all duration-500 border border-gray-100
-                 w-full md:w-[calc(50%-1rem)] lg:w-[calc(22%-1rem)] max-w-sm ${
+                 lg:w-[calc(22%-1rem)] lg:max-w-sm ${
                    serviciosInView
                      ? "opacity-100 translate-y-0"
                      : "opacity-0 translate-y-10"
@@ -217,34 +241,40 @@ export default function Home() {
       </section>
 
       {/* Beneficios */}
+      {/* 
+        MÓVIL: columna única, padding reducido, imagen arriba
+        DESKTOP: sin cambios (grid 8 cols, px-40)
+      */}
       <section ref={razonesRef} className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-40">
-          <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 items-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-40">
+          <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-4 items-center">
             {/* Imagen repartidor */}
             <div
-              className={`flex justify-center lg:col-span-4  transition-all duration-700 delay-200 ${
+              className={`flex justify-center lg:col-span-4 transition-all duration-700 delay-200 ${
                 razonesInView ? "opacity-100 scale-100" : "opacity-0 scale-90"
               }`}
             >
               <img
                 src="/images/repartidor.jpeg"
                 alt="Mensajero"
-                className="max-h-100 object-contain"
+                className="max-h-72 sm:max-h-96 lg:max-h-100 object-contain"
               />
             </div>
 
-            {/* Texto + razones (más ancho) */}
+            {/* Texto + razones */}
             <div
-              className={`lg:col-span-4 transition-all duration-700 delay-300 px-10 ${
+              className={`lg:col-span-4 transition-all duration-700 delay-300 px-0 lg:px-10 ${
                 razonesInView
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-10"
               }`}
             >
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">
-                
-                - Beneficios
-              </h2>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-orange-500 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                  <FaGift className="text-white text-xl" />
+                </div>
+                <h2 className="text-4xl font-bold text-gray-800">Beneficios</h2>
+              </div>
 
               <ul className="space-y-4">
                 {razones.map((razon, index) => (
@@ -284,7 +314,7 @@ export default function Home() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
               Lo que dicen nuestros clientes
             </h2>
             <p className="text-gray-600">
@@ -293,25 +323,28 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* 
+            MÓVIL: 1 columna
+            TABLET: 2 columnas
+            DESKTOP: 3 columnas (sin cambios)
+          */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonios.map((testimonio, index) => (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-700 ${
+                className={`bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
                   testimoniosInView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                {/* Header: foto + rating */}
                 <div className="flex items-center gap-4 mb-4">
                   <img
                     src={testimonio.foto}
                     alt={testimonio.nombre}
-                    className="w-14 h-14 rounded-full object-cover"
+                    className="w-14 h-14 rounded-full object-cover hover:scale-110 transition-transform duration-300"
                   />
-
                   <div>
                     <div className="flex gap-1">
                       {[...Array(testimonio.rating)].map((_, i) => (
@@ -326,8 +359,6 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-
-                {/* Testimonio */}
                 <p className="text-gray-700 italic leading-relaxed">
                   "{testimonio.testimonio}"
                 </p>
