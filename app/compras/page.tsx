@@ -64,26 +64,26 @@ export default function ComprasInternacionales() {
 
   const testimonios = [
     {
-      nombre: "Cynthia Rodriguez",
-      empresa: "Joyería JK",
+      nombre: "María González",
+      empresa: "Boutique Fashion",
       testimonio:
-        "Excelente servicio, mis clientes están satisfechos con las entregas que reciben día a día gracias al servicio de pago contra entrega.",
+        "Excelente servicio, mis clientes reciben sus pedidos el mismo día. La opción de contraentrega ha aumentado mis ventas un 40%.",
       rating: 5,
       foto: "/images/clientes/maria.jpg",
     },
     {
-      nombre: "Jorge Cárdenas",
-      empresa: "Importaciones Iphone",
+      nombre: "Carlos Mendoza",
+      empresa: "Tech Store Peru",
       testimonio:
-        "Mis importaciones me salen más rentables y lo mejor es que ellos me ayudan en todo mis tramites, buen servicio.",
+        "El servicio de fullfilment me ha permitido enfocarme en las ventas mientras ellos se encargan de toda la logística. Muy recomendable.",
       rating: 5,
       foto: "/images/clientes/carlos.jpg",
     },
     {
-      nombre: "Angelica Raymundi",
-      empresa: "Mikita",
+      nombre: "Andrea Flores",
+      empresa: "Cosméticos Lima",
       testimonio:
-        "Mi pedido de EEUU me llego rápido, estoy muy agradecida con los chicos de Qataru Express, porque son muy amables y pacientes.",
+        "La atención es personalizada y siempre están disponibles. El cambio de prenda es perfecto para mi negocio de ropa.",
       rating: 5,
       foto: "/images/clientes/andrea.jpg",
     },
@@ -146,9 +146,9 @@ export default function ComprasInternacionales() {
             </h1>
 
             <div className="flex flex-col gap-3 items-center lg:items-start">
-              <button className="bg-orange-600 cursor-pointer hover:bg-orange-700 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
+              <a href="https://wa.link/5tj896" target="_blank" className="bg-orange-600 cursor-pointer hover:bg-orange-700 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl">
                 MAYOR INFORMACION
-              </button>
+              </a>
             </div>
           </div>
 

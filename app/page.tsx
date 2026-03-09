@@ -161,7 +161,7 @@ export default function Home() {
             </h1>
             <div className="flex gap-4 mt-8 justify-center lg:justify-start">
               <a
-                href="https://wa.link/yc7jq2"
+                href="https://wa.link/5tj896"
                 target="_blank"
                 className="bg-green-700 cursor-pointer hover:bg-green-800 hover:scale-105 text-white font-semibold px-8 py-3 rounded transition-all duration-300 w-fit flex items-center gap-2 shadow-lg hover:shadow-xl"
               >
