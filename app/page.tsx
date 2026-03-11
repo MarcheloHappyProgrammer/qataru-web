@@ -63,28 +63,29 @@ export default function Home() {
     },
   ];
 
+  
   const testimonios = [
     {
-      nombre: "María González",
-      empresa: "Boutique Fashion",
+      nombre: "Cynthia Rodriguez",
+      empresa: "Joyería JK",
       testimonio:
-        "Excelente servicio, mis clientes reciben sus pedidos el mismo día. La opción de contraentrega ha aumentado mis ventas un 40%.",
+        "Excelente servicio, mis clientes están satisfechos con las entregas que reiben día a día gracias al servicio de pago contra entrega.",
       rating: 5,
       foto: "/images/clientes/maria.jpg",
     },
     {
-      nombre: "Carlos Mendoza",
-      empresa: "Tech Store Peru",
+      nombre: "Jorge Cárdenas",
+      empresa: "Importaciones Iphone",
       testimonio:
-        "El servicio de fullfilment me ha permitido enfocarme en las ventas mientras ellos se encargan de toda la logística. Muy recomendable.",
+        "Mis importaciones me salen más rentables y lo mejor es que ellos me ayudan en todos mis trámites, buen servicio.",
       rating: 5,
       foto: "/images/clientes/carlos.jpg",
     },
     {
-      nombre: "Andrea Flores",
-      empresa: "Cosméticos Lima",
+      nombre: "Angelica Raymundi",
+      empresa: "Mikita",
       testimonio:
-        "La atención es personalizada y siempre están disponibles. El cambio de prenda es perfecto para mi negocio de ropa.",
+        "Mi pedido de EEUU me llegó rápido, estoy muy agradecida con los chicos de Qataru Express, porque son muy amables y pacientes.",
       rating: 5,
       foto: "/images/clientes/andrea.jpg",
     },

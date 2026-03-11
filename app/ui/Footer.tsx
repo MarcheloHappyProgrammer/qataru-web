@@ -79,8 +79,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright Inferior */}
-      <div className="mt-12 pt-6 border-t border-blue-900 text-center text-xs text-gray-400">
-        <p className="p-2">
+      <div className="mt-12 pt-4 border-t border-blue-900 text-center text-xs text-gray-400">
+        <p className="p-1">
           Copyright © 2026, Qataru Express. Sitio web desarrollado por Marchelo
           Cortabrazo Rios
         </p>

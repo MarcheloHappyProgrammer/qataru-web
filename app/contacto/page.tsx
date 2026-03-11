@@ -79,9 +79,7 @@ export default function Contacto() {
                 CONTÁCTANOS
               </h1>
               <p className="text-gray-600 mb-8">
-                Cuéntanos qué necesitas y desde qué distrito. Planificamos la
-                ruta, retiramos en la ventana acordada y mantenemos comunicación
-                clara hasta confirmar la entrega.
+                Cuéntanos qué necesitas y nos pondremos en contacto en lo más breve posible.
               </p>
 
               <div className="space-y-4">
@@ -132,22 +130,7 @@ export default function Contacto() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"
                 ></textarea>
 
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    name="privacidad"
-                    id="privacidad"
-                    checked={formData.privacidad}
-                    onChange={handleChange}
-                    className="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
-                  />
-                  <label htmlFor="privacidad" className="text-sm text-gray-600">
-                    He leído y acepto la{" "}
-                    <span className="text-red-600 font-semibold cursor-pointer hover:underline">
-                      Políticas de privacidad
-                    </span>
-                  </label>
-                </div>
+                
 
                 <button
                   onClick={handleSubmit}

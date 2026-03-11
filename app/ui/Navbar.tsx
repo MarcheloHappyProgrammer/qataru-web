@@ -12,8 +12,8 @@ export default function Navbar() {
     <nav className="bg-white shadow-sm w-full font-sans">
       {/* Desktop & Mobile Header */}
       <div className="flex items-center justify-between h-20">
-        {/* Logo Area */}
-        <div className="pl-6 md:pl-10 shrink-0 z-50">
+        {/* Logo Area - oculto en móvil cuando el menú está abierto */}
+        <div className={`pl-6 md:pl-10 shrink-0 z-50 transition-opacity duration-200 ${isMenuOpen ? "opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto" : ""}`}>
           <Link
             href="/"
             className="text-orange-500 font-bold text-xl md:text-2xl flex items-center gap-2"
@@ -57,7 +57,6 @@ export default function Navbar() {
 
         {/* Mobile: franja naranja + botón hamburguesa */}
         <div className="lg:hidden flex h-full items-center">
-          {/* Franja naranja en móvil con clip-path igual al desktop */}
           <div
             className="h-full bg-orange-500 flex items-center pr-6 pl-10"
             style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }}
@@ -67,7 +66,7 @@ export default function Navbar() {
               className="text-2xl text-white z-50 cursor-pointer"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <FaTimes /> : <FaBars />}
+              <FaBars />
             </button>
           </div>
         </div>
@@ -88,9 +87,16 @@ export default function Navbar() {
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Mobile Menu Header */}
-          <div className="p-6 border-b">
+          {/* Mobile Menu Header con botón X */}
+          <div className="p-6 border-b flex items-center justify-between">
             <h2 className="text-xl font-bold text-gray-800">Menú</h2>
+            <button
+              onClick={toggleMenu}
+              className="text-gray-500 hover:text-orange-500 transition text-2xl cursor-pointer"
+              aria-label="Cerrar menú"
+            >
+              <FaTimes />
+            </button>
           </div>
 
           {/* Mobile Menu Links */}
