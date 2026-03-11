@@ -132,7 +132,7 @@ export default function Home() {
   const { ref: testimoniosRef, isInView: testimoniosInView } = useInView();
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero/Banner Section */}
       {/* 
         MÓVIL: altura automática, padding top/bottom, columna única centrada

@@ -121,7 +121,7 @@ export default function ComprasInternacionales() {
   const { ref: testimoniosRef, isInView: testimoniosInView } = useInView();
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Banner */}
       {/*
         MÓVIL: altura automática, flex-col centrado, padding vertical

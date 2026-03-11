@@ -61,7 +61,7 @@ export default function Contacto() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Header Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -144,16 +144,7 @@ export default function Contacto() {
         </div>
       </section>
 
-      {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/51928600370"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 z-50"
-        title="Chatea con nosotros"
-      >
-        <FaWhatsapp className="text-3xl" />
-      </a>
+    
     </div>
   );
 }
